@@ -90,6 +90,7 @@ a {
 a:hover {
   background: rgb(54, 54, 225);
   transition: .3s;
+
 }
 
 table {
@@ -99,8 +100,12 @@ table {
   margin: auto;
   border-radius: 8px;
   overflow: hidden;
-}
+  border-collapse: collapse;
 
+}
+tr {
+  border-bottom: 1px solid #888;
+}
 tr td:first-child {
   background: #c8e6f17d;
     color: black;
