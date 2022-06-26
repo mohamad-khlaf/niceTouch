@@ -12,7 +12,9 @@ let activeSlide = 0;
 
 const setActiveSlide = () => {
   slides.forEach((slide) => slide.classList.remove("active"));
+  // slides.forEach((slide) => slide.setAttribute("data-name",slide.getAttribute("data-custam"));
   slides[activeSlide].classList.add("active");
+  // slides[activeSlide].classList.add("active");
 };
 
 rightButton.addEventListener("click", () => {

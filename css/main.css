@@ -1,29 +1,63 @@
+/*  
+
+  # body
+  # header
+  # table info 
+  # price
+  # slider
+  # coact us
+
+ */
 
 body {
-background-color: #6FDCFF;
-background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2386e3fd' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%239deafb' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23b5f1f9' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23ccf8f7' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23E3FFF5' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
-background-attachment: fixed;
-background-size: cover;
-font-family: 'Cairo', sans-serif;
+  background-color: #6FDCFF;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%2386e3fd' points='1600 160 0 460 0 350 1600 50'/%3E%3Cpolygon fill='%239deafb' points='1600 260 0 560 0 450 1600 150'/%3E%3Cpolygon fill='%23b5f1f9' points='1600 360 0 660 0 550 1600 250'/%3E%3Cpolygon fill='%23ccf8f7' points='1600 460 0 760 0 650 1600 350'/%3E%3Cpolygon fill='%23E3FFF5' points='1600 800 0 800 0 750 1600 450'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: cover;
+  font-family: 'Cairo', sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+/* compo  */
+h2 {
+  border-bottom: 1px solid #888;
+  width: fit-content;
+  margin: auto;
+  color: brown;
+}
+h3 {
+  text-align: center;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  color: brown;
 }
 
+.up-and-down {
+  animation: 2.5s ease 0s infinite normal none running arrow_bounce;
+  text-align: center;
+  display: block;
+  margin-bottom: 15px;
+}
+@keyframes arrow_bounce { 
+  0%, 100%, 20%, 50%, 80% { transform: translateY(0px); }
+  40% { transform: translateY(-30px); }
+  60% { transform: translateY(-15px); }
+}
+/* Start header  */
 header .logo img {
-    width: 230px;
-    margin: auto;
-    display: block;
+  width: 230px;
+  margin: auto;
+  display: block;
 }
 .main-title {
   text-align: center;
   color: #795548;
+  line-height: 2;
+  margin-bottom: 30px;
 }
-.slider-container {
-  /* box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); */
-  height: 70vh;
-  width: 70vw;
-  position: relative;
-  overflow: hidden;
-  margin: auto;
-}
+/* End header  */
+/* Start  table info  */
 
 .info {
   margin: 30px auto ;
@@ -32,67 +66,6 @@ header .logo img {
   text-align: center;
   color: #777;
 }
-.slide {
-    opacity: 0;
-    height: 100%;
-    width: 100%;
-    background-position: center;
-    position: absolute;
-    transition: 0.4s ease;
-    z-index: 1;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.arrow {
-  position: absolute;
-  z-index: 9999;
-  background-color: transparent;
-  padding: 16px;
-  font-size: 18px;
-  border-radius: circle;
-  color: #fff;
-  border: 2px solid #888;
-  bottom: 0;
-  cursor: pointer;
-}
-i {
-  color: #888;
-}
-.arrow:focus {
-  outline: 0;
-}
-
-.left-arrow {
- left: 0%;
-}
-
-.right-arrow {
-
-}
-a {
-    text-decoration: none;
-    background: #6161cb;
-    color: ghostwhite;
-    text-align: center;
-    display: block;
-    width: fit-content;
-    margin: 30px auto;
-    padding: 20px 30px;
-    border-radius: 6px;
-    transition: .4s;
-}
-
-a:hover {
-  background: rgb(54, 54, 225);
-  transition: .3s;
-
-}
-
 table {
   table-layout: fixed;
   border-spacing: 0;
@@ -108,42 +81,131 @@ tr {
 }
 tr td:first-child {
   background: #c8e6f17d;
-    color: black;
+  color: black;
+  min-width: 60px;
+  text-align: center;
 }
 td {
-  padding: 15px;
+  padding: 12px;
 }
 tr td:nth-child(2) {
-  /* background: #c8e6f17d; */
-    color: #795548;
+  color: #795548;
 }
+/* End  table info  */
+/* Start price  */
 .price {
-    text-align: center;
-    background: #f5f5dcad;
-    width: fit-content;
-    margin: 15px auto 0px;
-    padding: 15px;
-    border-radius: 6px;
-    border: 1px solid #795548;
+  text-align: center;
+  background: #f5f5dcad;
+  width: fit-content;
+  margin: 15px auto 0px;
+  padding: 15px;
+  border-radius: 6px;
+  border: 1px solid #795548;
 }
 .before {
-    color: blue;
-    margin: 3px;
-    font-size: 24px;
-    position: relative;
+  color: blue;
+  margin: 3px;
+  font-size: 24px;
+  position: relative;
 }
 .before::before {
-    content: "";
-    width: 40px;
-    height: 2px;
-    background: #222;
-    position: absolute;
-    left: 0px;
-    top: 21px;
-    transform: rotate(306deg);
-
+  content: "";
+  width: 40px;
+  height: 2px;
+  background: #222;
+  position: absolute;
+  left: 0px;
+  top: 21px;
+  transform: rotate(306deg);
 }
 .after {
-   color: blue;
-    font-size: 18px;
+  color: blue;
+  font-size: 18px;
+}
+/* End price  */
+/* Start slider  */
+.slider-container {
+  height: 70vh;
+  width: 70vw;
+  position: relative;
+  overflow: hidden;
+  margin: auto;
+}
+
+.slide {
+  opacity: 0;
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  position: absolute;
+  transition: 0.4s ease;
+  z-index: 1;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.slide.active {
+  opacity: 1;
+}
+.arrow {
+  position: absolute;
+  z-index: 9999;
+  background-color: transparent;
+  padding: 16px;
+  font-size: 18px;
+  border-radius: circle;
+  color: #fff;
+  border: 2px solid #888;
+  bottom: 0;
+  cursor: pointer;
+}
+
+i {
+  color: #888;
+}
+.arrow:focus {
+  outline: 0;
+}
+.left-arrow {
+ left: 0%;
+}
+.color-name {
+  text-align: center;
+  color: brown;
+}
+/* End slider  */
+/* Start contact  */
+a {
+  text-decoration: none;
+  background: #6161cb;
+  color: ghostwhite;
+  text-align: center;
+  display: block;
+  width: fit-content;
+  margin: 30px auto;
+  padding: 20px 30px;
+  border-radius: 6px;
+  transition: .4s;
+}
+
+a:hover {
+  background: rgb(54, 54, 225);
+  transition: .3s;
+}
+.concat i {
+  font-size: 24px;
+  margin: 0px 4px;
+  color: white;
+}
+/* Start contact  */ 
+/* Start adfance */
+li {
+  padding: 12px;
+}
+/* End adfance */
+footer p {
+
+  background: #9be1f8;
+  padding: 12px 12px 22px;
+  text-align: center;
 }
